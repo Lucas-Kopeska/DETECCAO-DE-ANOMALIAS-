@@ -20,15 +20,33 @@ modelo, scaler, limiar = carregar_arquivos()
 # --- 2. DICIONÁRIOS DE MAPEAMENTO (UX) ---
 # Traduz o texto visual amigável para o número exato que a IA aprendeu
 ESTADOS_DICT = {
-    "Acre (AC)": 0, "Alagoas (AL)": 1, "Amazonas (AM)": 2, "Bahia (BA)": 3,
-    "Ceará (CE)": 4, "Distrito Federal (DF)": 5, "Espírito Santo (ES)": 6,
-    "Goiás (GO)": 7, "Maranhão (MA)": 8, "Mato Grosso (MT)": 9,
-    "Mato Grosso do Sul (MS)": 10, "Minas Gerais (MG)": 11, "Pará (PA)": 12,
-    "Paraíba (PB)": 13, "Paraná (PR)": 14, "Pernambuco (PE)": 15,
-    "Piauí (PI)": 16, "Rio de Janeiro (RJ)": 17, "Rio Grande do Norte (RN)": 18,
-    "Rio Grande do Sul (RS)": 19, "Rondônia (RO)": 20, "Roraima (RR)": 21,
-    "Santa Catarina (SC)": 22, "São Paulo (SP)": 23, "Sergipe (SE)": 24,
-    "Tocantins (TO)": 25
+    "Acre (AC)": 0,
+    "Alagoas (AL)": 1,
+    "Amazonas (AM)": 2,
+    "Amapá (AP)": 3,
+    "Bahia (BA)": 4,
+    "Ceará (CE)": 5,
+    "Distrito Federal (DF)": 6,
+    "Espírito Santo (ES)": 7,
+    "Goiás (GO)": 8,
+    "Maranhão (MA)": 9,
+    "Minas Gerais (MG)": 10,
+    "Mato Grosso do Sul (MS)": 11,
+    "Mato Grosso (MT)": 12,
+    "Pará (PA)": 13,
+    "Paraíba (PB)": 14,
+    "Pernambuco (PE)": 15,
+    "Piauí (PI)": 16,
+    "Paraná (PR)": 17,
+    "Rio de Janeiro (RJ)": 18,
+    "Rio Grande do Norte (RN)": 19,
+    "Rondônia (RO)": 20,
+    "Rio Grande do Sul (RS)": 21,
+    "Santa Catarina (SC)": 22,
+    "Sergipe (SE)": 23,
+    "São Paulo (SP)": 24,
+    "Tocantins (TO)": 25,
+    "Não Informado / Vazio": 26
 }
 
 LINHAS_DICT = {
