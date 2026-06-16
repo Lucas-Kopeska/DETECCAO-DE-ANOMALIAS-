@@ -93,8 +93,6 @@ if st.button("Analisar Risco", type="primary", use_container_width=True):
         # Calcular o score da OS nova
         score_os = modelo.decision_function(dados_padronizados) * -1
         nota_final = score_os[0]
-        # LINHA NOVA PARA DESCOBRIR O ERRO:
-        st.info(f"🛠️ DEBUG - Visão da Máquina: {dados_padronizados[0]}")
         
         # Veredito final comparando com o seu limiar
         st.markdown("---")
