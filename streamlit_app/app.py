@@ -52,12 +52,10 @@ ESTADOS_DICT = {
 LINHAS_DICT = {
     "Chopeira": 0,
     "Congelador": 1,
-    "Máquina de Café": 2,
-    "Pit Stop": 3,
-    "Post Mix": 4,
-    "Pré Resfriador": 5,
-    "Refrigerador": 6,
-    "Vending Machine": 7
+    "Post Mix": 2,
+    "Refrigerador": 3,
+    "Vending Machine": 4,
+    "Não Informado / Vazio": 5
 }
 
 # --- 3. INTERFACE DO USUÁRIO ---
