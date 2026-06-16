@@ -16,9 +16,10 @@ import numpy as np
 # O st.cache_resource garante que o modelo só seja carregado uma vez (deixa o app rápido)
 @st.cache_resource
 def carregar_arquivos():
-    modelo = joblib.load('modelo_isolation_forest.pkl')
-    scaler = joblib.load('scaler_os.pkl')
-    limiar = joblib.load('limiar_otimizado.pkl')
+    # Avisamos ao Python que os arquivos estão dentro da pasta 'models/'
+    modelo = joblib.load('models/modelo_isolation_forest.pkl')
+    scaler = joblib.load('models/scaler_os.pkl')
+    limiar = joblib.load('models/limiar_otimizado.pkl')
     return modelo, scaler, limiar
 
 modelo, scaler, limiar = carregar_arquivos()
