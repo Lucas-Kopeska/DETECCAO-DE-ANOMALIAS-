@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 import streamlit as st
 import joblib
 import pandas as pd
@@ -96,14 +95,14 @@ if st.button("Analisar Risco", type="primary", use_container_width=True):
         
         # Veredito final comparando com o seu limiar
         st.markdown("---")
-       limiar_negocio = limiar + 0.05  
+        limiar_negocio = limiar + 0.05  
 
         if nota_final > limiar_negocio:
-            st.error(f"**ALERTA DE ANOMALIA GRAVE!** (Score: `{nota_final:.4f}` / Limite: `{limiar_negocio:.4f}`)")
+            st.error(f"**ALERTA DE ANOMALIA!** (Score: `{nota_final:.4f}` / Limite: `{limiar_negocio:.4f}`)")
             st.write("Esta OS tem um comportamento suspeito e deve ser verificada.")
         elif nota_final > limiar:
-             st.warning(f"**ATENÇÃO** (Score: `{nota_final:.4f}`)")
-             st.write("Esta OS foge um pouco do padrão, mas está dentro da margem de tolerância.")
+            st.warning(f"**ATENÇÃO** (Score: `{nota_final:.4f}`)")
+            st.write("Esta OS foge um pouco do padrão, mas está dentro da margem de tolerância.")
         else:
             st.success(f"**ATENDIMENTO NORMAL** (Score: `{nota_final:.4f}` / Limite: `{limiar_negocio:.4f}`)")
             st.write("As métricas estão dentro do padrão aceitável.")
