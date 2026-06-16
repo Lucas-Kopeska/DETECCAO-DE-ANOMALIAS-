@@ -96,13 +96,17 @@ if st.button("Analisar Risco", type="primary", use_container_width=True):
         
         # Veredito final comparando com o seu limiar
         st.markdown("---")
-        if nota_final > limiar:
-            st.error(f"**ALERTA DE ANOMALIA!** (Score: `{nota_final:.4f}` / Limite: `{limiar:.4f}`)")
+       limiar_negocio = limiar + 0.05  
+
+        if nota_final > limiar_negocio:
+            st.error(f"**ALERTA DE ANOMALIA GRAVE!** (Score: `{nota_final:.4f}` / Limite: `{limiar_negocio:.4f}`)")
             st.write("Esta OS tem um comportamento suspeito e deve ser verificada.")
+        elif nota_final > limiar:
+             st.warning(f"**ATENÇÃO** (Score: `{nota_final:.4f}`)")
+             st.write("Esta OS foge um pouco do padrão, mas está dentro da margem de tolerância.")
         else:
-            st.success(f"**ATENDIMENTO NORMAL** (Score: `{nota_final:.4f}` / Limite: `{limiar:.4f}`)")
+            st.success(f"**ATENDIMENTO NORMAL** (Score: `{nota_final:.4f}` / Limite: `{limiar_negocio:.4f}`)")
             st.write("As métricas estão dentro do padrão aceitável.")
-            
     except Exception as e:
         st.warning("Ocorreu um erro no processamento matemático. Verifique se os arquivos .pkl na pasta 'models' estão atualizados.")
         st.write(f"Detalhes: {e}")
